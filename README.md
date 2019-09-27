@@ -21,7 +21,22 @@ var grade2 = 9.0
 var grade3 = 5.0
 
 // your code here
+
+var grade1: Double = 7.0
+var grade2: Double = 9.0
+var grade3: Double = 5.0
+var yourGrade: Double = 8.2
+var averageGrade: Double = grade1 + grade2 + grade3
+
+if yourGrade < averageGrade
+{
+    print("Your geade is below average.")
+}else{
+    print("Your grade is above average")
+}
+
 ```
+
 
 ***
 ## Question 2
@@ -32,6 +47,16 @@ You are given a number. Print even if the number is even or odd otherwise.
 let number = 2
 
 // your code here
+
+let number = 2
+
+if number % 2 == 0
+{
+    print("Even")
+}else
+{
+    print("Odd")
+}
 ```
 
 ***
@@ -44,6 +69,16 @@ var a = 12
 var b = 3
 
 // code here
+var a3 = 12
+var b3 = 3
+
+if a3 % b3 == 0
+{
+    print("Divisible")
+}else{
+    print("Not Divisible")
+}
+
 ```
 
 ***
@@ -69,6 +104,30 @@ var baconAge = 6 // the bacon is 6 days old
 var eggsAge = 12 // eggs are 12 days old
 
 // your code here
+
+var baconAge: Int = 82
+var eggsAge: Int = 11
+var baconRemaining = (7 - baconAge)
+var eggsRemaining = (21 - eggsAge)
+
+print(baconAge >= 8 ? "Your bacon is expired" : "You bacon still has \(baconRemaining) day(s) remaining before you need to throw out eggs.")
+
+print(eggsAge >= 22 ? "Eggs are expired, please replace." : "You have \(eggsRemaining) day(s) until you need to replace your eggs.")
+
+
+var fridge = (bacon: baconAge , eggs: eggsAge)
+
+switch fridge {
+case (0...7, 0...21 ):
+    print("You can cook both bacon and eggs.")
+case (7...10000 , 21...10000):
+    print("Both bacon and eggs expired. Please throw away.")
+case (0...7 , 21...10000):
+    print("Your bacon is fine, but eggs need to be replaced.")
+default:
+    print("Your eggs are fine. Please throw away bacon.")
+}
+Portion at the top was my first attempt then i relized i could do it a different way and attempted such.
 ```
 
 ***
@@ -92,6 +151,16 @@ If you use `random()` it will give you a random number within a specified range.
 let randomNum = Int.random(in: 0...100)
 
 // your code here
+
+let randomNum = Int.random(in: 0...100)
+
+if randomNum % 2 == 0{
+    print("Heads")
+}else{
+    print("Tails")
+}
+
+
 ```
 
 Hint: use an if/else block along with the `%` operator
