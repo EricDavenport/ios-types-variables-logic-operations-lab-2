@@ -139,7 +139,14 @@ The above rule is valid except that every 100 years special rules apply. Years t
 ```swift
 let year = 2014
 
-// your code here
+
+if (year % 4 == 0 && year % 400 == 0){
+    print("Leap year!")
+}else {
+    print("Not a leap year!")
+
+}
+
 ```
 
 ***
@@ -192,6 +199,7 @@ d. (4 < 3 || 4 > 3) && ("Message: " == "Message: ")
 e. !(3 != 3)
 
 ```
+Answer - A , B, D & E
 
 ***
 ## Question 10
@@ -240,6 +248,7 @@ c. let nameOfBook: Int = 14
 d. let yearPublished = "Nineteen-thirty-five"
 
 ```
+Answer - A, B, C, D
 
 ***
 ## Question 13
@@ -276,8 +285,13 @@ let isEqual = div == div2
 
 3. The value of isEqual is_____________________ (or write "isEqual will not compile")
 
-
 ```
+```
+1. div1 will compile to the value of 2
+2. dic 2 will compile to the value of 2.75(Double)
+3. isEqual will not compile. Int can not equal Double.
+```
+
 ***
 ## Question 15
 ```swift
@@ -327,6 +341,9 @@ b. It will print 50.0
 c. It will print 50
 d. It will give a compile-time error
 
+```
+```
+Answer: D - It will give a compile-time error - unable to add types Float and Double.
 ```
 ***
 ## Question 4 
@@ -384,6 +401,12 @@ var a = 2.0
 var b = 5.0
 
 ```
+```
+var a = 2.0
+var b = 5.0
+var c = (a + b) / 2
+print(c)
+```
 
 
 ***
@@ -399,6 +422,16 @@ You are given 3 grades stored in 3 variables of type Double finalsGrade, midterm
 var finalsGrade = 2.0
 var midtermGrade = 4.0
 var projectGrade = 3.0
+
+```
+```
+var finalsGrade: Double = 2.0 //50%
+var midtermGrade: Double = 4.0 //20%
+var projectGrade: Double = 3.0 //30%
+
+var averageGrade: Double = ((projectGrade + midtermGrade) + finalsGrade) / 2
+
+print("Grade for the class is \(averageGrade).")
 
 ```
 
